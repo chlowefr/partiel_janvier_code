@@ -4,6 +4,14 @@
 body{
     font-family: 'Ralleway', sans-serif;
     background-color: $background;
+    position: relative;
+}
+h1, h2, h3, h4, h5, a{
+    font-weight: 300;
+}
+p{
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.3);
 }
 
 nav{
@@ -40,35 +48,111 @@ nav{
                 color: rgba(255, 255, 255, 0.3);
             }
 
-            &:last-child{
+            .contact{
                 border: solid 2px white;
                 border-radius: 10px;
                 padding: 15px 40px;
+                color: white!important;
 
-                a{
-                    color: white;
-                }
             }
         }
     }
 }
+.section1{
+    height: 80vh;
+    background-size: cover;
+    padding: 0 0 0 235px;
+    display: flex;
+    align-items: center;
 
-button{
-    background-color: rgba(255, 255, 255, 0);
-    border-radius: 10px;
+    .container1{
+        position: relative;
+        width: 33%;
 
-    a{
-        text-decoration: none;
-        color: white;
+        h1{
+            font-size: 50px;
+            color: white;
+            margin-bottom: 15px;
+        }
+        p{
+            font-size: 14px;
+            margin-bottom: 60px;
+        }
+
+        button{
+            background-color: rgba(255, 255, 255, 0);
+            border-radius: 10px;
+        
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        
+            &:nth-child(3){
+                @include style-btn($purple);
+                background-image: linear-gradient(to right, #46C2FF , #BD11FA);
+            }
+            &:last-child{
+                @include style-btn(rgba(255, 255, 255, 0));
+                border: 2px solid white;
+                margin-left: 20px;
+            }
+        }
+    }
+    .container2{
+        .triangle1{
+            position: absolute;
+            top: 135px;
+            height: 175px; 
+
+        }
+        .mockup{
+            position: absolute;
+            z-index: -999;
+            right: 0;
+            top: 75px;
+            height: 800px; 
+        }
     }
 
-    &:first-child{
-        @include style-btn($purple);
-        background-image: linear-gradient(to right, #46C2FF , #BD11FA);
+}
+
+.section2{
+    height: 120vh;
+    width: 100vw;
+    position: relative;
+
+    .container3{
+
+        .triangle2{
+            position: absolute;
+            top: 135px;
+            left: 50px;
+            height: 300px; 
+        }
+        .masonry {
+            column-count: 3;
+            column-gap: 10px;
+          }
+          
+          .item {
+            background-color: $background;
+            box-shadow: 0px 0px 10px $grey;
+            border-radius: 10px;
+            display: inline-block;
+            margin: 10px;
+            padding: 20px 30px;
+          }
     }
-    &:last-child{
-        @include style-btn(rgba(255, 255, 255, 0));
-        border: 2px solid white;
-        margin-left: 20px;
+    
+    .container4{
+        .cercle1{
+            position: absolute;
+            bottom: 0px;
+            right: -200px;
+            height: 500px; 
+        }
+        
     }
+
 }
