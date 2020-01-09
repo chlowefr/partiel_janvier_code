@@ -297,4 +297,45 @@ nav ul li .contact {
   align-items: flex-start;
 }
 
+.section5 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 400px;
+  height: 100vh;
+}
+.section5 .carre1 {
+  position: absolute;
+  top: -250px;
+  right: 50px;
+}
+.section5 .container9 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.section5 .container9 .btn-choice {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+.section5 .container9 .btn-choice p {
+  margin: 10px;
+}
+.section5 .container9 .btn-choice p:first-child {
+  color: white;
+  font-weight: 400;
+}
+.section5 .container10 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.css.map */
