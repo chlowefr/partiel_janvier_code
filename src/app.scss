@@ -8,11 +8,53 @@ body{
 }
 h1, h2, h3, h4, h5, a{
     font-weight: 300;
+    text-decoration: none;
+}
+h1{
+    font-size: 50px;
+    color: white;
+}
+h2{
+    color: white;
+    font-size: 35px;
+    font-weight: 500;
+}
+h3{
+    padding: 15px 25px;
+    background-color: rgba(0, 236, 153, 0.15);
+    color: $green;
+    font-size: 15px;
+    width: fit-content;
+    font-weight: 500;
+}
+h4{
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
 }
 p{
     font-weight: 300;
     color: rgba(255, 255, 255, 0.3);
+    font-size: 13px;
+    line-height: 30px;
 }
+.btn-gradient{
+    @include style-btn($purple);
+    background-image: linear-gradient(to right, #46C2FF , #BD11FA);
+    border-radius: 10px;
+}
+button{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+.item {
+    background-color: $background;
+    box-shadow: 0px 0px 10px $grey;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 25px 40px;
+
+  }
 
 nav{
     display: flex;
@@ -67,35 +109,27 @@ nav{
 
     .container1{
         position: relative;
-        width: 33%;
+        width: 35%;
 
         h1{
-            font-size: 50px;
-            color: white;
             margin-bottom: 15px;
         }
         p{
-            font-size: 14px;
             margin-bottom: 60px;
         }
 
         button{
-            background-color: rgba(255, 255, 255, 0);
-            border-radius: 10px;
         
             a{
                 text-decoration: none;
                 color: white;
             }
         
-            &:nth-child(3){
-                @include style-btn($purple);
-                background-image: linear-gradient(to right, #46C2FF , #BD11FA);
-            }
             &:last-child{
                 @include style-btn(rgba(255, 255, 255, 0));
                 border: 2px solid white;
                 margin-left: 20px;
+                border-radius: 10px;
             }
         }
     }
@@ -121,38 +155,90 @@ nav{
     height: 120vh;
     width: 100vw;
     position: relative;
+    display: flex;
+    align-items: center;
 
     .container3{
+        width: 65%;
+        padding: 0 0 0 100px;
 
         .triangle2{
             position: absolute;
-            top: 135px;
+            top: 50px;
             left: 50px;
             height: 300px; 
         }
-        .masonry {
-            column-count: 3;
-            column-gap: 10px;
+        .masonry-line1, .masonry-line2, .masonry-line3 {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+          }
+        
+          .masonry-line2{
+
+            .item:first-child{
+                align-self: flex-start;
+            }
+            .item:last-child{
+                align-self: center;
+            }
+          }
+          .masonry-line3{
+
+            .item:first-child{
+                align-self: flex-start;
+            }
+            .item:last-child{
+                align-self: flex-start;
+            }
           }
           
-          .item {
-            background-color: $background;
-            box-shadow: 0px 0px 10px $grey;
-            border-radius: 10px;
-            display: inline-block;
-            margin: 10px;
-            padding: 20px 30px;
-          }
     }
     
     .container4{
+        @extend .container1;
+        padding: 0 285px 0 50px;
+
         .cercle1{
             position: absolute;
-            bottom: 0px;
+            bottom: -100px;
             right: -200px;
             height: 500px; 
         }
         
     }
 
+}
+.section3{
+    display: flex;
+    align-items: center;
+    padding: 0 285px 0 285px;
+
+    .container5{
+        button{
+            @extend .btn-gradient;
+            
+            a{
+                color: white;
+            }
+        }
+    }
+
+    .container6, .container7{
+        .item{
+            padding: 40px 0;
+
+            .pencil-case{
+                background-color: $hover;
+                padding: 20px 40px;
+            }
+
+            h4, p{
+                padding: 0 40px;
+            }
+        }
+    }
+    .container7{
+        padding-top: 200px;
+    }
 }
