@@ -52,3 +52,23 @@ nav{
         }
     }
 }
+
+button{
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
+
+    &:first-child{
+        @include style-btn($purple);
+        background-image: linear-gradient(to right, #46C2FF , #BD11FA);
+    }
+    &:last-child{
+        @include style-btn(rgba(255, 255, 255, 0));
+        border: 2px solid white;
+        margin-left: 20px;
+    }
+}

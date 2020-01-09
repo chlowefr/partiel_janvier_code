@@ -1,0 +1,6 @@
+@mixin style-btn($shadow){
+    border: none;
+    box-shadow: 0px 0px 15px $shadow;
+    font-size: 25px;
+    padding: 20px 35px;
+}
